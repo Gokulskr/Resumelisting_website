@@ -1,0 +1,16 @@
+{
+  "files": {
+    "key1": {
+      "name": "file1.html",
+      "path": "new/pdf&rendition=1.pdf"
+    },
+    "key2": {
+      "name": "photoresume.pdf",
+      "path": "new/photoresume.pdf"
+    },
+    "key3": {
+      "name": "file3.docx",
+      "path": "MyFiles/file3.docx"
+    }
+  }
+}

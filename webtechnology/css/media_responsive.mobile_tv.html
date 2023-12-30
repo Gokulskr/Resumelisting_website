@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{ 
+            height: 80vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border: 2px solid black; 
+            font-size: 40px; 
+            } 
+            
+        .small{ 
+            background-color: blue; 
+            display: none; 
+            } 
+        .medium{ 
+            background-color: chartreuse; 
+            display: none; 
+            } 
+        .large{ 
+            background-color: crimson; 
+            display: none; 
+            } 
+        .x-large{ 
+            background-color:plum; 
+            display: none; 
+            } 
+        @media (max-width:500px){ 
+        .small{ 
+            display: flex; 
+        } 
+    } 
+    @media (min-width:501px) and (max-width:700px){ 
+        .medium{ 
+            display: flex; 
+            } 
+        } 
+        @media (min-width:701px) and (max-width:1100px){ 
+            .large{ display: flex; 
+            } 
+        } 
+        @media (min-width:1101px){ 
+                .x-large{ display: flex; 
+            } 
+        }
+</style>
+</head> <body> <!-- css3 introduced media query , which is used to create a respnsive web desing , view of web page differs from one screen size to another screen size mobile screen , ipad screen, laptop screen , desktop screen , telivison screen --> <!-- @media => what type of media screen it is consisting syntax : @media expressions{ css codes }--> 
+    <div id="container"> <div class="box small ">IM SMALL SCREEN (MOBILE PHONE )</div> 
+    <div class="box medium "> IM MEDIUM SCREEN (TAB)</div> <div class="box large ">IM LARGE SCREEN (LAPTOP , DESKTOP )</div>
+     <div class="box x-large ">IM X-LARGE SCREEN (TELIVISION)</div> </div> 
+</body>
+</html>

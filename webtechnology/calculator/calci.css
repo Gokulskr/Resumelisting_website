@@ -1,0 +1,47 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#calci {
+  width: 30%;
+  text-align: center;
+  margin: auto;
+  border: 10px double black;
+  background-image: linear-gradient(
+    grey,
+    black,
+    black
+  ); /* background-color: black; */
+}
+div {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+input[type="text"] {
+  color: black;
+  width: 100%;
+  height: 80px;
+  font-size: 40px;
+}
+#onoff {
+  color: white;
+  font-size: 25px;
+  text-align: left;
+}
+#ce {
+  text-align: right;
+  margin-right: 20px;
+}
+button {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  font-size: 35px;
+  background-image: radial-gradient(white, grey);
+}
+button:hover {
+  background-image: radial-gradient(white, black);
+}

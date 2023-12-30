@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List of Files</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			height: 100vh;
+			font-family: Arial, sans-serif;
+		}
+		#file_list {
+			width: 200px;
+			height: 100%;
+			background-color: #f0f0f0;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		#file_list ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		#file_list li {
+			padding: 10px;
+			cursor: pointer;
+		}
+		#file_content {
+			flex: 1;
+			height: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+	</style>
+	<script type="text/javascript">
+		var files = [
+			"MyFiles/file1.html",
+			"photoresume.pdf",
+			"MyFiles/file3.docx"
+		];
+		function loadFiles() {
+			var file_list = document.getElementById('file_list');
+			var ul = document.createElement("ul");
+			for (var i = 0; i < files.length; i++) {
+				var li = document.createElement("li");
+				li.innerHTML = files[i];
+				li.setAttribute("onclick", "openFile('" + files[i] + "')");
+				ul.appendChild(li);
+			}
+			file_list.appendChild(ul);
+		}
+		function openFile(file) {
+			var iframe = document.createElement("iframe");
+			iframe.setAttribute("src", file);
+			var file_content = document.getElementById("file_content");
+			file_content.innerHTML = "";
+			file_content.appendChild(iframe);
+		}
+	</script>
+</head>
+<body onload="loadFiles()">
+	<div id="file_list"></div>
+	<div id="file_content"></div>
+</body>
+</html>
